@@ -1,0 +1,119 @@
+﻿@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Announcement>
+
+    <section class="section main-banner" id="top" data-section="section1">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/course-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>HOŞGELDİNİZ</h6>
+                <h2><em>D</em>eğer<em><br />Ü</em>reten<br />Üniversite</h2>
+                <div class="main-button">
+                    <div class="scroll-to-section"><a href="#section4">Duyurulara Gözat</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+@await Component.InvokeAsync("AnnouncementList")
+
+    @*
+        Duyuruları ViewComponent'dan çektiğimiz için
+        buradan kaldırdık
+        
+        
+        
+        <section class="section courses" data-section="section4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Duyurular</h2>
+                    </div>
+                </div>
+
+
+                <div class="owl-carousel owl-theme">
+                    @foreach (var item in Model)
+                    {
+                        <div class="item">
+                            <img src="assets/images/courses-01.jpg" alt="Course #1">
+                            <div class="down-content">
+                                <h4>@item.AnnouncementTitle</h4>
+                                <p>@item.AnnouncementDesc</p>
+
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+@await Html.PartialAsync("/PartialView/Contact.cshtml")
+
+
+
+    <!--
+        
+        PartialView'den çektiğimiz için Index'ten Contact
+        bölümünü kaldırdık
+        
+        
+        <section class="section contact" data-section="section6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Bizimle iletişime geçin</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">-->
+
+                    <!-- Do you need a working HTML contact-form script?
+
+                    Please visit https://templatemo.com/contact page -->
+
+                    <!--<form id="contact" action="" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Ad Soyad" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input name="email" type="text" class="form-control" id="email" placeholder="E-mail" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Mesaj..." required=""></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div id="map">
+                        <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->

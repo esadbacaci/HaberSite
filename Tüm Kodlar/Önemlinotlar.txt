@@ -1,0 +1,5 @@
+iqr=q3-q1'dir
+%50quantile= median dır mean değil!
+“Standart normal dağılım” ortalaması 0 ve standart sapması 1 olan normal dağılımdır.
+standardizasyon ve normalizasyon için okuyun:
+https://okanarik.medium.com/makine-%C3%B6%C4%9Frenmesinde-veri-normalizasyonu-ve-standardizasyonu-827c5142b050

@@ -1,0 +1,33 @@
+﻿@model Announcement
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+@{Layout = null;
+    
+
+    }
+
+
+
+<form asp-action="Update" asp-controller="AdminPanel" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="email">Başlık</label>
+        <input type="hidden" name="AnnouncementID" value="@Model.AnnouncementID"/>
+        <input type="text" class="form-control" name="AnnouncementTitle" value="@Model.AnnouncementTitle">
+    </div>
+    <div class="form-group">
+        
+        <label for="pwd">Açıklama</label>
+        <input type="text" class="form-control" name="AnnouncementDesc" value="@Model.AnnouncementDesc">
+        <input type="file" name="AnnouncementImg" value="@Model.AnnouncementImg" />
+    </div>
+    
+
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>

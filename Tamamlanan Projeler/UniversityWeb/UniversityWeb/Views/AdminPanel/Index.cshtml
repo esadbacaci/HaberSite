@@ -1,0 +1,68 @@
+﻿@model List<Announcement>
+@{Layout = null;}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+       
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h2><a type="button" asp-action="Add" asp-controller="AdminPanel" class="btn btn-success">Yeni Duyuru Ekle</a></h2>
+    <h2><a type="button" asp-action="Index" asp-controller="Home" class="btn btn-warning">Siteyi Ziyaret Et</a></h2>
+
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Img</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+<tr>
+
+    <td>@item.AnnouncementID</td>
+    <td>@item.AnnouncementTitle</td>
+    <td>@item.AnnouncementDesc</td>
+    <td>@item.AnnouncementImg</td>
+    <td>
+        <a asp-action="Update" asp-controller="AdminPanel" asp-route-id="@item.AnnouncementID" type="button" class="btn btn-info">Güncelle</a>
+        <a asp-action="Delete" asp-controller="AdminPanel" asp-route-id="@item.AnnouncementID" type="button" class="btn btn-danger">Sil</a>
+
+    </td>
+
+</tr>}
+
+    </table>
+
+</body>
+</html>
