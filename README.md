@@ -1,4 +1,7 @@
 # HaberSite
-ASP.net core MVC ile oluşturulmuş admin panel içeren haber sitesi(Blazor)
+ASP.net core mvc news site (w/blazor)
+if you want login admin page you can write this(/admin) in url
 
-Admin panel girişi için /admin
+Features
+-News add
+
